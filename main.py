@@ -12,4 +12,5 @@ for names in names_of_characters:
     for character in response.json():
         if character['name'] in names_of_characters:
             intelligence[character['powerstats']['intelligence']] = character['name']
-print(intelligence)
+            smartest_heroe = dict([max(intelligence.items(), key=lambda k_v: k_v[1])])
+print(smartest_heroe)
